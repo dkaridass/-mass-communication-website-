@@ -70,6 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize video backgrounds
     initializeVideoBackgrounds();
     initializeImageBackgrounds();
+    
+    // Mobile video optimization
+    optimizeVideosForMobile();
 
     // Initialize Hau Studio contact functionality
     initializeContactSection();
@@ -746,6 +749,37 @@ window.MassCommunication = {
         });
     }
 };
+
+// Mobile Video Optimization
+function optimizeVideosForMobile() {
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        // Disable autoplay on mobile for better performance
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            video.autoplay = false;
+            video.muted = true;
+            video.playsInline = true;
+            
+            // Show poster image prominently on mobile
+            if (video.poster) {
+                video.style.opacity = '1';
+            }
+        });
+        
+        // Add touch event handling for mobile video play
+        videos.forEach(video => {
+            video.addEventListener('touchstart', function() {
+                if (this.paused) {
+                    this.play().catch(e => console.log('Video play failed:', e));
+                }
+            });
+        });
+        
+        console.log('Mobile video optimization applied');
+    }
+}
 
 // Hau Studio Contact Section Functionality
 function initializeContactSection() {

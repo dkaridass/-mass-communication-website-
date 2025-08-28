@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Mass Communication — Direction créative & production</title>
     <meta name="description" content="Mass Communication est une agence de marketing digital multidisciplinaire basée à Lubumbashi, RDC, spécialisée dans la création d'expériences de marque premium et de visuels pour des marques ambitieuses.">
     <meta name="keywords" content="marketing digital, direction créative, production, Lubumbashi, RDC, Congo, agence web, création site internet, production vidéo, podcast, événements corporatifs, identité visuelle, stratégie digitale">
@@ -125,7 +125,8 @@
         <div class="video-container">
             <!-- Optimized Hero Video -->
             <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="static/images/hero/hero-fallback.jpg">
-                <source src="static/videos/showreel.mp4" type="video/mp4">
+                <source src="static/videos/showreel.mp4" type="video/mp4" media="(min-width: 769px)">
+                <source src="static/images/hero/hero-fallback.jpg" type="image/jpeg" media="(max-width: 768px)">
                 <!-- Fallback for older browsers -->
                 Your browser does not support the video tag.
             </video>
