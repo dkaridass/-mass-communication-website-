@@ -4,10 +4,18 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_mail import Mail, Message
 
 # Configure logging
-logging.basicConfig(level=logging.DEBUG)
+if os.environ.get('FLASK_DEBUG') == 'true':
+    logging.basicConfig(level=logging.DEBUG)
+else:
+    logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key-change-in-production")
+
+# Production configuration
+if os.environ.get('FLASK_DEBUG') != 'true':
+    app.config['DEBUG'] = False
+    app.config['TESTING'] = False
 
 # Mail configuration
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'

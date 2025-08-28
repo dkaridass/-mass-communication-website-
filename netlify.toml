@@ -4,6 +4,8 @@
 
 [build.environment]
   PYTHON_VERSION = "3.9"
+  FLASK_DEBUG = "false"
+  FLASK_APP = "app.py"
 
 [[redirects]]
   from = "/*"
