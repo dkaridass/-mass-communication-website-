@@ -1,0 +1,21 @@
+# Mass Communication - Robots.txt
+# Allow all search engines to crawl all content
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://masscommunication.cd/sitemap.xml
+
+# Optional: Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block any admin or private areas (add if you have them)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow important resources
+Allow: /static/css/
+Allow: /static/js/
+Allow: /static/images/
+Allow: /static/videos/

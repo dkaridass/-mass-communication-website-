@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Communication — Direction créative & production</title>
+    <meta name="description" content="Mass Communication est une agence de marketing digital multidisciplinaire basée à Lubumbashi, RDC, spécialisée dans la création d'expériences de marque premium et de visuels pour des marques ambitieuses.">
+    <meta name="keywords" content="marketing digital, direction créative, production, Lubumbashi, RDC, Congo, agence web, création site internet, production vidéo, podcast, événements corporatifs, identité visuelle, stratégie digitale">
+    <meta name="author" content="Mass Communication">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://masscommunication.cd/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mass Communication — Direction créative & production | Lubumbashi, RDC">
+    <meta property="og:description" content="Agence de marketing digital multidisciplinaire à Lubumbashi, RDC. Création d'expériences de marque premium, production vidéo, podcasts, conception web et conseil marketing pour entreprises ambitieuses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://masscommunication.cd/">
+    <meta property="og:image" content="https://masscommunication.cd/static/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Mass Communication">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mass Communication — Direction créative & production | Lubumbashi, RDC">
+    <meta name="twitter:description" content="Agence de marketing digital multidisciplinaire à Lubumbashi, RDC. Création d'expériences de marque premium, production vidéo, podcasts et conseil marketing.">
+    <meta name="twitter:image" content="https://masscommunication.cd/static/images/twitter-card.jpg">
+    <meta name="twitter:site" content="@masscommunication">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="application-name" content="Mass Communication">
+    <meta name="apple-mobile-web-app-title" content="Mass Communication">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-config" content="{{ url_for('static', filename='browserconfig.xml') }}">
+    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    
+    <!-- Google Fonts - Optimized Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Smooth Scrolling Library -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="{{ url_for('static', filename='css/style.css') }}" as="style">
+    <link rel="preload" href="{{ url_for('static', filename='images/cases/project-1-mining.jpg') }}" as="image">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Minimalist Floating Navigation - Always visible at top -->
+    <header role="banner">
+        <nav class="floating-nav" id="floating-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <!-- Navigation Links - Clean and minimalist -->
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        </nav>
+    </header>
+
+    <!-- Ultra-Minimalist Hero Section -->
+    <main class="hero-minimal">
+        <!-- Fixed Top Header -->
+        <div class="top-bar">
+            <div class="logo">
+                <span class="logo-dot">●</span>
+                <span class="logo-text">Mass Communication</span>
+            </div>
+            <div class="location-time">
+                <span class="location">LUBUMBASHI</span>
+                <span class="dot-separator">●</span>
+                <span class="time" id="live-time">--:--:-- GMT+2</span>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            <!-- Large Headline -->
+            <div class="headline">
+                <h1 class="main-title">
+                    <em>Direction créative complète</em><br>
+                    & production
+                </h1>
+            </div>
+
+            <!-- Description Block -->
+            <div class="description">
+                <p>Mass Communication est une agence multidisciplinaire indépendante créant des expériences de marque premium et des visuels pour des marques ambitieuses et organisations, des start‑ups aux entreprises établies à Lubumbashi et en RDC.</p>
+            </div>
+        </div>
+        
+        <!-- Subtle Watermark Branding -->
+        <div class="watermark-brand">MASS</div>
+    </main>
+
+
+    <!-- Full-Screen Video Section (Hau Studio Style) -->
+    <section class="video-section">
+        <div class="video-container">
+            <!-- Optimized Hero Video -->
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+                <source src="{{ url_for('static', filename='videos/showreel.mp4') }}" type="video/mp4">
+                <!-- Fallback for older browsers -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Selected Work Section (Hau Studio Style) -->
+    <section id="work" class="work-section-hau" role="main" aria-labelledby="work-heading">
+        <div class="work-container-hau">
+            <div class="work-header-hau">
+                <h2 id="work-heading" class="work-title-hau">Selected work<span class="work-count">(5)</span></h2>
+                <span class="work-dot">●</span>
+                <a href="{{ url_for('portfolio') }}" class="view-all-link">VIEW ALL</a>
+            </div>
+            
+            <div class="work-grid-hau">
+                <!-- Mining Brand Project -->
+                <div class="work-item-hau large" data-project="mining-brand">
+                    <img src="{{ url_for('static', filename='images/cases/project-1-mining.jpg') }}" alt="Stratégie de marque industrie minière" loading="lazy">
+                    <div class="work-overlay-hau">
+                        <div class="work-info">
+                            <span class="project-category">Production Corporate</span>
+                            <h3 class="project-title">Une stratégie de marque distincte pour l'industrie minière</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tech Repositioning Project -->
+                <div class="work-item-hau large" data-project="tech-repositioning">
+                    <img src="{{ url_for('static', filename='images/cases/project-2-tech.jpg') }}" alt="Repositionnement marque tech" loading="lazy">
+                    <div class="work-overlay-hau">
+                        <div class="work-info">
+                            <span class="project-category">Identité Visuelle</span>
+                            <h3 class="project-title">Un repositionnement audacieux pour une marque tech émergente</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Podcast Larza Project -->
+                <div class="work-item-hau small" data-project="podcast-larza">
+                    <img src="{{ url_for('static', filename='images/cases/project-3-podcast.jpg') }}" alt="Production podcast premium" loading="lazy">
+                    <div class="work-overlay-hau">
+                        <div class="work-info">
+                            <span class="project-category">Production Podcast</span>
+                            <h3 class="project-title">L'Histoire de Larza</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Corporate Events Project -->
+                <div class="work-item-hau small" data-project="corporate-events">
+                    <img src="{{ url_for('static', filename='images/cases/project-4-events.jpg') }}" alt="Événements corporatifs premium" loading="lazy">
+                    <div class="work-overlay-hau">
+                        <div class="work-info">
+                            <span class="project-category">Événementiel</span>
+                            <h3 class="project-title">La fusion du sport et de la sophistication</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Urban Mobility Project -->
+                <div class="work-item-hau small" data-project="mobility-rebranding">
+                    <img src="{{ url_for('static', filename='images/cases/project-5-mobility.jpg') }}" alt="Rebranding mobilité urbaine" loading="lazy">
+                    <div class="work-overlay-hau">
+                        <div class="work-info">
+                            <span class="project-category">Stratégie Digitale</span>
+                            <h3 class="project-title">Rebranding de la mobilité urbaine</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transition Video Section (Between Work and Services) -->
+    <section class="transition-video-section">
+        <div class="transition-video-container">
+            <video 
+                class="transition-video" 
+                autoplay 
+                muted 
+                loop 
+                playsinline
+                preload="none"
+                disablepictureinpicture
+                webkit-playsinline
+            >
+                <source src="{{ url_for('static', filename='videos/transition-video.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <!-- Clean cinematic presentation - no overlay text -->
+        </div>
+    </section>
+
+    <!-- 01 Production Photo & Vidéo Section (Modern Split-Screen) -->
+    <section id="production-video" class="split-service-section">
+        <div class="split-container">
+            <!-- Visual Side -->
+            <div class="split-visual">
+                <video 
+                    class="split-video" 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline
+                    preload="none"
+                >
+                    <source src="{{ url_for('static', filename='videos/production-bg.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <!-- Content Side -->
+            <div class="split-content">
+                <div class="service-number-large">01</div>
+                <h2 class="split-title">Production Photo & Vidéo</h2>
+                <p class="split-description">
+                    Images et vidéos qui marquent. Nous créons du contenu visuel premium qui amplifie votre impact et élève votre marque.
+                </p>
+                <p class="split-details">
+                    Chaque projet combine vision créative et excellence technique. Du concept initial à la livraison finale, nous transformons vos idées en réalisations visuelles puissantes qui connectent authentiquement avec votre audience.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02 Production de Podcasts Section (Modern Split-Screen) -->
+    <section id="podcasts" class="split-service-section split-reverse">
+        <div class="split-container">
+            <!-- Content Side (Left on reverse) -->
+            <div class="split-content">
+                <div class="service-number-large">02</div>
+                <h2 class="split-title">Production de Podcasts</h2>
+                <p class="split-description">
+                    Audio premium qui captive. Studio professionnel, montage expert, et distribution stratégique pour amplifier votre voix.
+                </p>
+                <p class="split-details">
+                    De l'enregistrement au mixage final, nous créons des expériences audio immersives qui engagent et fidélisent votre audience sur toutes les plateformes.
+                </p>
+            </div>
+            
+            <!-- Visual Side (Right on reverse) -->
+            <div class="split-visual">
+                <video 
+                    class="split-video" 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline
+                    preload="none"
+                >
+                    <source src="{{ url_for('static', filename='videos/podcast-bg.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03 Conception Web Section (Modern Split-Screen) -->
+    <section id="web-design" class="split-service-section">
+        <div class="split-container">
+            <!-- Visual Side -->
+            <div class="split-visual">
+                <video 
+                    class="split-video" 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline
+                    preload="none"
+                >
+                    <source src="{{ url_for('static', filename='videos/web-design-bg.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <!-- Content Side -->
+            <div class="split-content">
+                <div class="service-number-large">03</div>
+                <h2 class="split-title">Conception Web</h2>
+                <p class="split-description">
+                    Expériences digitales qui convertissent. Design moderne, développement sur mesure, et optimisation continue pour maximiser votre impact en ligne.
+                </p>
+                <p class="split-details">
+                    Chaque interface allie esthétique raffinée et performance technique pour créer des expériences utilisateur mémorables qui renforcent votre présence digitale.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04 Conseil Marketing Section (Modern Split-Screen) -->
+    <section id="marketing" class="split-service-section split-reverse">
+        <div class="split-container">
+            <!-- Content Side (Left on reverse) -->
+            <div class="split-content">
+                <div class="service-number-large">04</div>
+                <h2 class="split-title">Conseil Marketing</h2>
+                <p class="split-description">
+                    Stratégies sur mesure qui performent. Audit complet, positionnement différenciant, et campagnes multicanaux adaptées au marché congolais.
+                </p>
+                <p class="split-details">
+                    Notre expertise locale combinée aux meilleures pratiques internationales vous garantit un ROI optimisé et une croissance durable sur votre marché.
+                </p>
+            </div>
+            
+            <!-- Visual Side (Right on reverse) -->
+            <div class="split-visual">
+                <img 
+                    src="{{ url_for('static', filename='images/services/marketing-consultation.jpg') }}"
+                    alt="Conseil Marketing"
+                    class="split-image"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- 05 Création d'Entreprise Section (Modern Split-Screen) -->
+    <section id="startup" class="split-service-section">
+        <div class="split-container">
+            <!-- Visual Side -->
+            <div class="split-visual">
+                <img 
+                    src="{{ url_for('static', filename='images/services/business-startup.jpg') }}"
+                    alt="Création d'Entreprise"
+                    class="split-image"
+                    loading="lazy"
+                >
+            </div>
+            
+            <!-- Content Side -->
+            <div class="split-content">
+                <div class="service-number-large">05</div>
+                <h2 class="split-title">Création d'Entreprise</h2>
+                <p class="split-description">
+                    De l'idée au succès. Business plans solides, identité de marque percutante, et accompagnement complet pour transformer votre vision en réalité.
+                </p>
+                <p class="split-details">
+                    Coaching personnalisé, stratégies de lancement optimisées, et soutien administratif pour établir des fondations durables et propulser votre croissance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 06 Affichage Numérique Section (Modern Split-Screen) -->
+    <section id="digital-display" class="split-service-section split-reverse">
+        <div class="split-container">
+            <!-- Content Side (Left on reverse) -->
+            <div class="split-content">
+                <div class="service-number-large">06</div>
+                <h2 class="split-title">Affichage Numérique</h2>
+                <p class="split-description">
+                    Écrans haute définition qui captivent. Solutions LED premium, signalétique dynamique, et gestion de contenu intelligente pour maximiser votre visibilité.
+                </p>
+                <p class="split-details">
+                    Installation professionnelle, maintenance garantie, et contenu adaptatif qui transforme vos espaces en puissants outils de communication et d'engagement.
+                </p>
+            </div>
+            
+            <!-- Visual Side (Right on reverse) -->
+            <div class="split-visual">
+                <img 
+                    src="{{ url_for('static', filename='images/services/digital-displays.jpg') }}"
+                    alt="Affichage Numérique"
+                    class="split-image"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- 07 Événements Corporatifs Section (Modern Split-Screen) -->
+    <section id="events" class="split-service-section">
+        <div class="split-container">
+            <!-- Visual Side -->
+            <div class="split-visual">
+                <img 
+                    src="{{ url_for('static', filename='images/services/corporate-events.jpg') }}"
+                    alt="Événements Corporatifs"
+                    class="split-image"
+                    loading="lazy"
+                >
+            </div>
+            
+            <!-- Content Side -->
+            <div class="split-content">
+                <div class="service-number-large">07</div>
+                <h2 class="split-title">Événements Corporatifs</h2>
+                <p class="split-description">
+                    Expériences qui marquent. Conférences premium, lancements produits mémorables, et événements hybrides avec production technique d'excellence.
+                </p>
+                <p class="split-details">
+                    Gestion complète de A à Z, technologies de pointe, et expertise médiatique pour créer des moments inoubliables qui renforcent votre image de marque.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 08 Communication RSE Section (Modern Split-Screen) -->
+    <section id="communication-rse" class="split-service-section split-reverse">
+        <div class="split-container">
+            <!-- Content Side (Left on reverse) -->
+            <div class="split-content">
+                <div class="service-number-large">08</div>
+                <h2 class="split-title">Communication RSE</h2>
+                <p class="split-description">
+                    Accompagnement des entreprises dans la mise en valeur de leurs actions de responsabilité sociétale et environnementale.
+                </p>
+                <p class="split-details">
+                    Stratégies de communication authentiques pour valoriser votre engagement social et environnemental, renforcer votre image de marque responsable et créer un impact positif durable.
+                </p>
+            </div>
+            
+            <!-- Visual Side (Right on reverse) -->
+            <div class="split-visual">
+                <img 
+                    src="{{ url_for('static', filename='images/services/communication-rse.jpg') }}"
+                    alt="Communication RSE"
+                    class="split-image"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- 09 Staffing Section (Modern Split-Screen) -->
+    <section id="staffing" class="split-service-section">
+        <div class="split-container">
+            <!-- Visual Side -->
+            <div class="split-visual">
+                <img 
+                    src="{{ url_for('static', filename='images/services/staffing.jpg') }}"
+                    alt="Staffing"
+                    class="split-image"
+                    loading="lazy"
+                >
+            </div>
+            
+            <!-- Content Side -->
+            <div class="split-content">
+                <div class="service-number-large">09</div>
+                <h2 class="split-title">Staffing</h2>
+                <p class="split-description">
+                    Solutions expertes en recrutement et gestion de personnel pour vos événements et activations marketing stratégiques.
+                </p>
+                <p class="split-details">
+                    Sélection rigoureuse de talents qualifiés, formation spécialisée, et gestion complète d'équipes pour maximiser l'impact de vos événements et campagnes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10 ESG & Droits Humains Section (Modern Split-Screen) -->
+    <section id="esg-human-rights" class="split-service-section split-reverse">
+        <div class="split-container">
+            <!-- Content Side (Left on reverse) -->
+            <div class="split-content">
+                <div class="service-number-large">10</div>
+                <h2 class="split-title">ESG & Droits Humains</h2>
+                <p class="split-description">
+                    Conseil stratégique pour intégrer des normes environnementales, sociales et de gouvernance dans votre entreprise.
+                </p>
+                <p class="split-details">
+                    Audit complet, mise en conformité réglementaire, et développement de politiques durables pour une gouvernance exemplaire et un impact social positif.
+                </p>
+            </div>
+            
+            <!-- Visual Side (Right on reverse) -->
+            <div class="split-visual">
+                <img 
+                    src="{{ url_for('static', filename='images/services/esg-human-rights.jpg') }}"
+                    alt="ESG & Droits Humains"
+                    class="split-image"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- 11 Collaboration & Engagement Section (Modern Split-Screen) -->
+    <section id="collaboration-engagement" class="split-service-section">
+        <div class="split-container">
+            <!-- Visual Side -->
+            <div class="split-visual">
+                <img 
+                    src="{{ url_for('static', filename='images/services/collaboration-engagement.jpg') }}"
+                    alt="Collaboration & Engagement"
+                    class="split-image"
+                    loading="lazy"
+                >
+            </div>
+            
+            <!-- Content Side -->
+            <div class="split-content">
+                <div class="service-number-large">11</div>
+                <h2 class="split-title">Collaboration & Engagement</h2>
+                <p class="split-description">
+                    Stratégies pour renforcer la participation des parties prenantes, favoriser le dialogue et créer un impact durable.
+                </p>
+                <p class="split-details">
+                    Facilitation d'ateliers collaboratifs, mécanismes d'engagement innovants, et construction de partenariats stratégiques pour un écosystème business prospère.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Background Image -->
+    <section id="about" class="section about-section" aria-labelledby="about-heading">
+        <div class="about-background-image">
+            <!-- REPLACE WITH YOUR ABOUT BACKGROUND: Upload to static/images/about/about-bg.jpg -->
+            <img src="{{ url_for('static', filename='images/about/about-bg.jpg') }}" alt="About Background" class="section-bg-image" loading="lazy">
+            <div class="section-bg-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="about-content">
+                <h2 id="about-heading" class="sr-only">À propos de Mass Communication</h2>
+                <div class="about-text">
+                    <p class="about-description">
+                        Mass Communication est une agence de marketing digital multidisciplinaire basée à Lubumbashi, en République Démocratique du Congo. Nous sommes spécialisés dans l'amélioration de la présence en ligne des entreprises grâce à des solutions marketing stratégiques et créatives.
+                    </p>
+                    <p class="about-description">
+                        Notre équipe est dédiée à la création d'expériences de marque premium, de campagnes innovantes et de visuels qui génèrent des résultats concrets. Nous combinons l'expertise internationale avec une connaissance approfondie du marché congolais et africain.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projets réalisés</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Années d'expérience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Clients satisfaits</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Hau Studio Style Split Screen -->
+    <section id="contact" class="contact-split-section">
+        <div class="contact-split-container">
+            <!-- Content Side (Left) -->
+            <div class="contact-split-content">
+                <div class="contact-header">
+                    <h2 class="contact-title">Contact</h2>
+                    <p class="contact-subtitle">Commençons une conversation à propos de votre projet.</p>
+                    
+                    <div class="contact-cta">
+                        <button class="hau-contact-button">
+                            PRENDRE CONTACT
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Flash Messages -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }}" role="alert">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                
+                <div class="contact-info-section">
+                    <div class="contact-info-row">
+                        <div class="contact-info-col">
+                            <h4 class="contact-info-title">NOUS CONTACTER</h4>
+                            <p class="contact-info-item">office@mass-com.com</p>
+                            <p class="contact-info-item">+243 99 597 47 70</p>
+                        </div>
+                        <div class="contact-info-col">
+                            <h4 class="contact-info-title">NOUS SUIVRE</h4>
+                            <p class="contact-info-item">Instagram</p>
+                            <p class="contact-info-item">LinkedIn</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hidden Form for Functionality -->
+                <div class="contact-form-section" style="display: none;">
+                    <form action="{{ url_for('contact') }}" method="POST" class="hau-contact-form">
+                        <div class="form-group">
+                            <input type="text" class="hau-form-input" id="name" name="name" placeholder="Nom complet" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="hau-form-input" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="hau-form-input" id="company" name="company" placeholder="Entreprise">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="hau-form-input hau-form-textarea" id="message" name="message" rows="4" placeholder="Décrivez votre projet..." required></textarea>
+                        </div>
+                        <button type="submit" class="hau-submit-button">
+                            ENVOYER
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Visual Side (Right) -->
+            <div class="contact-split-visual">
+                <div class="contact-image-container">
+                    <img 
+                        src="{{ url_for('static', filename='images/contact/contact-bg.jpg') }}"
+                        alt="Mass Communication Team"
+                        class="contact-split-image"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Mass Communication. Tous droits réservés.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#work" class="footer-link">Travaux</a>
+                    <a href="#services" class="footer-link">Services</a>
+                    <a href="#about" class="footer-link">À propos</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Mass Communication",
+      "alternateName": "Mass Communication Agency",
+      "description": "Agence de marketing digital multidisciplinaire basée à Lubumbashi, RDC, spécialisée dans la création d'expériences de marque premium et de visuels pour des marques ambitieuses.",
+      "url": "https://masscommunication.cd",
+      "logo": "https://masscommunication.cd/static/images/logo.png",
+      "image": "https://masscommunication.cd/static/images/og-image.jpg",
+      "telephone": "+243-99-597-47-70",
+      "email": "office@mass-com.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lubumbashi",
+        "addressRegion": "Haut-Katanga",
+        "addressCountry": "CD"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -11.6792,
+        "longitude": 27.5044
+      },
+      "foundingDate": "2022",
+      "numberOfEmployees": "3-10",
+      "slogan": "Direction créative & production",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": -11.6792,
+          "longitude": 27.5044
+        },
+        "geoRadius": "1000000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services de Marketing Digital",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Production Photo & Vidéo",
+              "description": "Images et vidéos qui marquent. Nous créons du contenu visuel premium qui amplifie votre impact et élève votre marque."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Production de Podcasts",
+              "description": "Audio premium qui captive. Studio professionnel, montage expert, et distribution stratégique pour amplifier votre voix."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Conception Web",
+              "description": "Expériences digitales qui convertissent. Design moderne, développement sur mesure, et optimisation continue pour maximiser votre impact en ligne."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Conseil Marketing",
+              "description": "Stratégies sur mesure qui performent. Audit complet, positionnement différenciant, et campagnes multicanaux adaptées au marché congolais."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Création d'Entreprise",
+              "description": "De l'idée au succès. Business plans solides, identité de marque percutante, et accompagnement complet pour transformer votre vision en réalité."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Événements Corporatifs",
+              "description": "Expériences qui marquent. Conférences premium, lancements produits mémorables, et événements hybrides avec production technique d'excellence."
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/mass-communication",
+        "https://www.instagram.com/masscommunication"
+      ]
+    }
+    </script>
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Mass Communication",
+      "image": "https://masscommunication.cd/static/images/logo.png",
+      "description": "Agence de marketing digital multidisciplinaire à Lubumbashi, RDC",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lubumbashi",
+        "addressRegion": "Haut-Katanga",
+        "addressCountry": "CD"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -11.6792,
+        "longitude": 27.5044
+      },
+      "telephone": "+243-99-597-47-70",
+      "email": "office@mass-com.com",
+      "url": "https://masscommunication.cd",
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 08:00-17:00",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+      "currenciesAccepted": "USD, CDF"
+    }
+    </script>
+
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Mass Communication",
+      "url": "https://masscommunication.cd",
+      "description": "Agence de marketing digital multidisciplinaire basée à Lubumbashi, RDC",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mass Communication",
+        "logo": "https://masscommunication.cd/static/images/logo.png"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://masscommunication.cd/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
