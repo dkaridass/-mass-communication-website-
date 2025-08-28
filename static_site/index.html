@@ -124,7 +124,7 @@
     <section class="video-section">
         <div class="video-container">
             <!-- Optimized Hero Video -->
-            <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+            <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="static/images/hero/hero-fallback.jpg">
                 <source src="static/videos/showreel.mp4" type="video/mp4">
                 <!-- Fallback for older browsers -->
                 Your browser does not support the video tag.
@@ -232,7 +232,8 @@
                     muted 
                     loop 
                     playsinline
-                    preload="none"
+                    preload="metadata"
+                    poster="static/images/services/services-fallback.jpg"
                 >
                     <source src="static/videos/production-bg.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -276,7 +277,8 @@
                     muted 
                     loop 
                     playsinline
-                    preload="none"
+                    preload="metadata"
+                    poster="static/images/services/services-fallback.jpg"
                 >
                     <source src="static/videos/podcast-bg.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -296,7 +298,8 @@
                     muted 
                     loop 
                     playsinline
-                    preload="none"
+                    preload="metadata"
+                    poster="static/images/services/services-fallback.jpg"
                 >
                     <source src="static/videos/web-design-bg.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -586,16 +589,14 @@
                     </div>
                 </div>
                 
-                <!-- Flash Messages -->
-                {% with messages = get_flashed_messages(with_categories=true) %}
-                    {% if messages %}
-                        {% for category, message in messages %}
-                            <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }}" role="alert">
-                                {{ message }}
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
+                <!-- Success Message Display -->
+                <div id="contact-success" class="alert alert-success" role="alert" style="display: none;">
+                    Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.
+                </div>
+                
+                <div id="contact-error" class="alert alert-danger" role="alert" style="display: none;">
+                    Une erreur s'est produite. Veuillez réessayer.
+                </div>
                 
                 <div class="contact-info-section">
                     <div class="contact-info-row">

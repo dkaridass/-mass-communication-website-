@@ -778,12 +778,31 @@ function initializeContactSection() {
         });
     }
     
-    // Handle form submission
+    // Handle form submission for Netlify Forms
     const contactForm = document.querySelector('.hau-contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            // Let the form submit naturally to Flask backend
-            console.log('Contact form submitted');
+            // Show success message
+            const successMessage = document.getElementById('contact-success');
+            const errorMessage = document.getElementById('contact-error');
+            
+            if (successMessage) {
+                successMessage.style.display = 'block';
+                // Hide after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            }
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Hide form and show info
+            contactFormSection.style.display = 'none';
+            contactInfoSection.style.display = 'block';
+            contactButton.textContent = 'PRENDRE CONTACT';
+            
+            console.log('Contact form submitted to Netlify');
         });
     }
 }
