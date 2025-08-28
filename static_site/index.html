@@ -60,7 +60,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body>
+<body class="desktop">
+    <!-- Mobile Detection Test -->
+    <div id="mobile-test" style="position: fixed; top: 10px; right: 10px; background: #000; color: #fff; padding: 5px; font-size: 12px; z-index: 9999;">
+        Device: <span id="device-type">Detecting...</span>
+    </div>
+    
     <!-- Minimalist Floating Navigation - Always visible at top -->
     <header role="banner">
         <nav class="floating-nav" id="floating-nav" role="navigation" aria-label="Main navigation">

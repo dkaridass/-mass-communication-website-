@@ -2679,6 +2679,68 @@ video {
     }
 }
 
+/* Mobile-First Responsive Design */
+body.mobile .video-section {
+    height: 60vh !important;
+    background: red !important; /* Debug: should show red background on mobile */
+}
+
+body.mobile .hero-video {
+    object-position: center center !important;
+}
+
+body.mobile .hero-video {
+    object-position: center center !important;
+}
+
+body.mobile .split-container {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto 1fr !important;
+    gap: 2rem !important;
+}
+
+body.mobile .split-reverse .split-container {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto 1fr !important;
+}
+
+body.mobile .split-content {
+    padding: 2rem 1.5rem !important;
+    text-align: center !important;
+}
+
+body.mobile .split-visual {
+    height: 40vh !important;
+}
+
+body.mobile .work-grid-hau {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+}
+
+body.mobile .work-item-hau.large,
+body.mobile .work-item-hau.small {
+    height: 300px !important;
+}
+
+body.mobile .work-section-hau {
+    padding: 60px 20px !important;
+}
+
+body.mobile .work-header-hau {
+    flex-direction: column !important;
+    gap: 16px !important;
+    text-align: center !important;
+}
+
+body.mobile .work-title-hau {
+    font-size: 32px !important;
+}
+
+body.mobile .view-all-link {
+    margin-left: 0 !important;
+}
+
 /* Alert Messages */
 .alert {
     padding: var(--spacing-md) var(--spacing-lg);
