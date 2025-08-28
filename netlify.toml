@@ -1,12 +1,12 @@
 [build]
-  command = "python -m pip install --upgrade pip && pip install -r requirements.txt"
+  command = "python3 -m pip install --upgrade pip && python3 -m pip install -r requirements.txt"
   publish = "."
 
 [build.environment]
-  PYTHON_VERSION = "3.9"
   FLASK_DEBUG = "false"
   FLASK_APP = "app.py"
   PIP_VERSION = "21.3.1"
+  PYTHON_VERSION = "3.11"
 
 [[redirects]]
   from = "/*"
