@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page non trouvée - Mass Communication</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+        }
+        .error-content h1 {
+            font-size: 120px;
+            font-weight: 300;
+            margin: 0;
+            color: #000;
+        }
+        .error-content h2 {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #666;
+        }
+        .error-content p {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #888;
+        }
+        .back-home {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 0;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+        }
+        .back-home:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-content">
+            <h1>404</h1>
+            <h2>Page non trouvée</h2>
+            <p>La page que vous recherchez n'existe pas ou a été déplacée.</p>
+            <a href="/" class="back-home">Retour à l'accueil</a>
+        </div>
+    </div>
+</body>
+</html>

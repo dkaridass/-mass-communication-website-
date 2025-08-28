@@ -1,12 +1,7 @@
 [build]
-  command = "python3 -m pip install --upgrade pip && python3 -m pip install -r requirements.txt"
-  publish = "."
+  publish = "static_site"
 
-[build.environment]
-  FLASK_DEBUG = "false"
-  FLASK_APP = "app.py"
-  PIP_VERSION = "21.3.1"
-  PYTHON_VERSION = "3.11"
+# No build environment needed for static site
 
 [[redirects]]
   from = "/*"
