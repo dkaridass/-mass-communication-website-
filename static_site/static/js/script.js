@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function() {
             const projectId = this.getAttribute('data-project');
             // Redirect to portfolio page with project highlight
-            window.location.href = `/portfolio#${projectId}`;
+            window.location.href = `portfolio.html#${projectId}`;
         });
     });
 

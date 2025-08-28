@@ -43,7 +43,6 @@
     <link rel="manifest" href="static/manifest.json">
     
     <!-- Microsoft Tiles -->
-    <meta name="msapplication-config" content="static/browserconfig.xml">
     <meta name="msapplication-TileImage" content="static/apple-touch-icon.png">
     
     <!-- Google Fonts - Optimized Loading -->
@@ -126,7 +125,7 @@
         <div class="video-container">
             <!-- Optimized Hero Video -->
             <video class="hero-video" autoplay muted loop playsinline preload="metadata">
-                <source src="{{ url_for('static', filename='videos/showreel.mp4') }}" type="video/mp4">
+                <source src="static/videos/showreel.mp4" type="video/mp4">
                 <!-- Fallback for older browsers -->
                 Your browser does not support the video tag.
             </video>
@@ -139,13 +138,13 @@
             <div class="work-header-hau">
                 <h2 id="work-heading" class="work-title-hau">Selected work<span class="work-count">(5)</span></h2>
                 <span class="work-dot">●</span>
-                <a href="{{ url_for('portfolio') }}" class="view-all-link">VIEW ALL</a>
+                <a href="portfolio.html" class="view-all-link">VIEW ALL</a>
             </div>
             
             <div class="work-grid-hau">
                 <!-- Mining Brand Project -->
                 <div class="work-item-hau large" data-project="mining-brand">
-                    <img src="{{ url_for('static', filename='images/cases/project-1-mining.jpg') }}" alt="Stratégie de marque industrie minière" loading="lazy">
+                    <img src="static/images/cases/project-1-mining.jpg" alt="Stratégie de marque industrie minière" loading="lazy">
                     <div class="work-overlay-hau">
                         <div class="work-info">
                             <span class="project-category">Production Corporate</span>
@@ -156,7 +155,7 @@
                 
                 <!-- Tech Repositioning Project -->
                 <div class="work-item-hau large" data-project="tech-repositioning">
-                    <img src="{{ url_for('static', filename='images/cases/project-2-tech.jpg') }}" alt="Repositionnement marque tech" loading="lazy">
+                    <img src="static/images/cases/project-2-tech.jpg" alt="Repositionnement marque tech" loading="lazy">
                     <div class="work-overlay-hau">
                         <div class="work-info">
                             <span class="project-category">Identité Visuelle</span>
@@ -167,7 +166,7 @@
                 
                 <!-- Podcast Larza Project -->
                 <div class="work-item-hau small" data-project="podcast-larza">
-                    <img src="{{ url_for('static', filename='images/cases/project-3-podcast.jpg') }}" alt="Production podcast premium" loading="lazy">
+                    <img src="static/images/cases/project-3-podcast.jpg" alt="Production podcast premium" loading="lazy">
                     <div class="work-overlay-hau">
                         <div class="work-info">
                             <span class="project-category">Production Podcast</span>
@@ -178,7 +177,7 @@
                 
                 <!-- Corporate Events Project -->
                 <div class="work-item-hau small" data-project="corporate-events">
-                    <img src="{{ url_for('static', filename='images/cases/project-4-events.jpg') }}" alt="Événements corporatifs premium" loading="lazy">
+                    <img src="static/images/cases/project-4-events.jpg" alt="Événements corporatifs premium" loading="lazy">
                     <div class="work-overlay-hau">
                         <div class="work-info">
                             <span class="project-category">Événementiel</span>
@@ -189,7 +188,7 @@
                 
                 <!-- Urban Mobility Project -->
                 <div class="work-item-hau small" data-project="mobility-rebranding">
-                    <img src="{{ url_for('static', filename='images/cases/project-5-mobility.jpg') }}" alt="Rebranding mobilité urbaine" loading="lazy">
+                    <img src="static/images/cases/project-5-mobility.jpg" alt="Rebranding mobilité urbaine" loading="lazy">
                     <div class="work-overlay-hau">
                         <div class="work-info">
                             <span class="project-category">Stratégie Digitale</span>
@@ -214,7 +213,7 @@
                 disablepictureinpicture
                 webkit-playsinline
             >
-                <source src="{{ url_for('static', filename='videos/transition-video.mp4') }}" type="video/mp4">
+                <source src="static/videos/transition-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             
@@ -235,7 +234,7 @@
                     playsinline
                     preload="none"
                 >
-                    <source src="{{ url_for('static', filename='videos/production-bg.mp4') }}" type="video/mp4">
+                    <source src="static/videos/production-bg.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -279,7 +278,7 @@
                     playsinline
                     preload="none"
                 >
-                    <source src="{{ url_for('static', filename='videos/podcast-bg.mp4') }}" type="video/mp4">
+                    <source src="static/videos/podcast-bg.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -299,7 +298,7 @@
                     playsinline
                     preload="none"
                 >
-                    <source src="{{ url_for('static', filename='videos/web-design-bg.mp4') }}" type="video/mp4">
+                    <source src="static/videos/web-design-bg.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -336,7 +335,7 @@
             <!-- Visual Side (Right on reverse) -->
             <div class="split-visual">
                 <img 
-                    src="{{ url_for('static', filename='images/services/marketing-consultation.jpg') }}"
+                    src="static/images/services/marketing-consultation.jpg"
                     alt="Conseil Marketing"
                     class="split-image"
                     loading="lazy"
@@ -351,7 +350,7 @@
             <!-- Visual Side -->
             <div class="split-visual">
                 <img 
-                    src="{{ url_for('static', filename='images/services/business-startup.jpg') }}"
+                    src="static/images/services/business-startup.jpg"
                     alt="Création d'Entreprise"
                     class="split-image"
                     loading="lazy"
@@ -390,7 +389,7 @@
             <!-- Visual Side (Right on reverse) -->
             <div class="split-visual">
                 <img 
-                    src="{{ url_for('static', filename='images/services/digital-displays.jpg') }}"
+                    src="static/images/services/digital-displays.jpg"
                     alt="Affichage Numérique"
                     class="split-image"
                     loading="lazy"
@@ -405,7 +404,7 @@
             <!-- Visual Side -->
             <div class="split-visual">
                 <img 
-                    src="{{ url_for('static', filename='images/services/corporate-events.jpg') }}"
+                    src="static/images/services/corporate-events.jpg"
                     alt="Événements Corporatifs"
                     class="split-image"
                     loading="lazy"
@@ -444,7 +443,7 @@
             <!-- Visual Side (Right on reverse) -->
             <div class="split-visual">
                 <img 
-                    src="{{ url_for('static', filename='images/services/communication-rse.jpg') }}"
+                    src="static/images/services/communication-rse.jpg"
                     alt="Communication RSE"
                     class="split-image"
                     loading="lazy"
@@ -459,7 +458,7 @@
             <!-- Visual Side -->
             <div class="split-visual">
                 <img 
-                    src="{{ url_for('static', filename='images/services/staffing.jpg') }}"
+                    src="static/images/services/staffing.jpg"
                     alt="Staffing"
                     class="split-image"
                     loading="lazy"
@@ -498,7 +497,7 @@
             <!-- Visual Side (Right on reverse) -->
             <div class="split-visual">
                 <img 
-                    src="{{ url_for('static', filename='images/services/esg-human-rights.jpg') }}"
+                    src="static/images/services/esg-human-rights.jpg"
                     alt="ESG & Droits Humains"
                     class="split-image"
                     loading="lazy"
@@ -513,7 +512,7 @@
             <!-- Visual Side -->
             <div class="split-visual">
                 <img 
-                    src="{{ url_for('static', filename='images/services/collaboration-engagement.jpg') }}"
+                    src="static/images/services/collaboration-engagement.jpg"
                     alt="Collaboration & Engagement"
                     class="split-image"
                     loading="lazy"
@@ -538,7 +537,7 @@
     <section id="about" class="section about-section" aria-labelledby="about-heading">
         <div class="about-background-image">
             <!-- REPLACE WITH YOUR ABOUT BACKGROUND: Upload to static/images/about/about-bg.jpg -->
-            <img src="{{ url_for('static', filename='images/about/about-bg.jpg') }}" alt="About Background" class="section-bg-image" loading="lazy">
+            <img src="static/images/about/about-bg.jpg" alt="About Background" class="section-bg-image" loading="lazy">
             <div class="section-bg-overlay"></div>
         </div>
         
@@ -640,7 +639,7 @@
             <div class="contact-split-visual">
                 <div class="contact-image-container">
                     <img 
-                        src="{{ url_for('static', filename='images/contact/contact-bg.jpg') }}"
+                        src="static/images/contact/contact-bg.jpg"
                         alt="Mass Communication Team"
                         class="contact-split-image"
                         loading="lazy"
@@ -818,6 +817,6 @@
     </script>
 
     <!-- JavaScript -->
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="static/js/script.js"></script>
 </body>
 </html>
