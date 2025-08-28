@@ -1,29 +1,6 @@
 // Modern JavaScript with Video Background System and Smooth Scrolling for Mass Communication Website
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile detection and body class
-    function detectMobile() {
-        const isMobile = window.innerWidth <= 768;
-        const body = document.body;
-        const deviceTypeElement = document.getElementById('device-type');
-        
-        if (isMobile) {
-            body.classList.remove('desktop');
-            body.classList.add('mobile');
-            if (deviceTypeElement) deviceTypeElement.textContent = 'MOBILE';
-            console.log('Mobile device detected');
-        } else {
-            body.classList.remove('mobile');
-            body.classList.add('desktop');
-            if (deviceTypeElement) deviceTypeElement.textContent = 'DESKTOP';
-            console.log('Desktop device detected');
-        }
-    }
-    
-    // Detect on load and resize
-    detectMobile();
-    window.addEventListener('resize', detectMobile);
-    
     // Disable smooth scrolling for better video performance
     let lenis = null;
     console.log('Using native browser scrolling for optimal video performance');
@@ -93,9 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize video backgrounds
     initializeVideoBackgrounds();
     initializeImageBackgrounds();
-    
-    // Mobile video optimization
-    optimizeVideosForMobile();
 
     // Initialize Hau Studio contact functionality
     initializeContactSection();
@@ -772,37 +746,6 @@ window.MassCommunication = {
         });
     }
 };
-
-// Mobile Video Optimization
-function optimizeVideosForMobile() {
-    const isMobile = window.innerWidth <= 768;
-    
-    if (isMobile) {
-        // Disable autoplay on mobile for better performance
-        const videos = document.querySelectorAll('video');
-        videos.forEach(video => {
-            video.autoplay = false;
-            video.muted = true;
-            video.playsInline = true;
-            
-            // Show poster image prominently on mobile
-            if (video.poster) {
-                video.style.opacity = '1';
-            }
-        });
-        
-        // Add touch event handling for mobile video play
-        videos.forEach(video => {
-            video.addEventListener('touchstart', function() {
-                if (this.paused) {
-                    this.play().catch(e => console.log('Video play failed:', e));
-                }
-            });
-        });
-        
-        console.log('Mobile video optimization applied');
-    }
-}
 
 // Hau Studio Contact Section Functionality
 function initializeContactSection() {
