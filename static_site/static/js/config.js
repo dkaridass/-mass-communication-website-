@@ -2,8 +2,8 @@
 // Update this with your actual Netlify URL when you deploy
 
 window.SiteConfig = {
-    // Update this to your actual Netlify URL
-    baseUrl: 'https://your-site-name.netlify.app',
+    // Your actual domain
+    baseUrl: 'https://mass-com.com',
     
     // Social media URLs
     social: {
@@ -46,13 +46,19 @@ window.updateMetaTags = function() {
         ogUrlMeta.content = window.SiteConfig.baseUrl + window.location.pathname;
     }
     
-    // Update Twitter URLs
-    const twitterUrlMeta = document.querySelector('meta[name="twitter:url"]');
-    if (twitterUrlMeta) {
-        twitterUrlMeta.content = window.SiteConfig.baseUrl + window.location.pathname;
-    }
-    
-    console.log('Meta tags updated with base URL:', window.SiteConfig.baseUrl);
+            // Update Twitter URLs
+        const twitterUrlMeta = document.querySelector('meta[name="twitter:url"]');
+        if (twitterUrlMeta) {
+            twitterUrlMeta.content = window.SiteConfig.baseUrl + window.location.pathname;
+        }
+        
+        // Update any remaining placeholder URLs
+        const allMetaTags = document.querySelectorAll('meta[content*="your-site-name.netlify.app"]');
+        allMetaTags.forEach(meta => {
+            meta.content = meta.content.replace('your-site-name.netlify.app', window.SiteConfig.baseUrl.replace('https://', ''));
+        });
+        
+        console.log('Meta tags updated with base URL:', window.SiteConfig.baseUrl);
 };
 
 // Auto-update meta tags when config loads
