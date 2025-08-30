@@ -70,6 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize video backgrounds
     initializeVideoBackgrounds();
     initializeImageBackgrounds();
+    
+    // Force autoplay for all videos
+    forceVideoAutoplay();
 
     // Initialize Hau Studio contact functionality
     initializeContactSection();
@@ -746,6 +749,54 @@ window.MassCommunication = {
         });
     }
 };
+
+// Force all videos to autoplay
+function forceVideoAutoplay() {
+    const videos = document.querySelectorAll('video');
+    
+    videos.forEach(video => {
+        // Ensure autoplay attributes are set
+        video.autoplay = true;
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        
+        // Force play on load
+        video.addEventListener('loadedmetadata', function() {
+            this.play().catch(e => {
+                console.log('Video autoplay failed, showing poster image:', e);
+                // Show poster image if video fails to play
+                if (this.poster) {
+                    this.style.opacity = '1';
+                }
+            });
+        });
+        
+        // Handle play errors
+        video.addEventListener('error', function() {
+            console.log('Video error, showing poster image');
+            if (this.poster) {
+                this.style.opacity = '1';
+            }
+        });
+        
+        // Ensure video plays when it becomes visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    if (video.paused) {
+                        video.play().catch(e => console.log('Video play failed:', e));
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        observer.observe(video);
+    });
+    
+    console.log('Video autoplay forced for', videos.length, 'videos');
+}
 
 // Hau Studio Contact Section Functionality
 function initializeContactSection() {

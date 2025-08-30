@@ -162,7 +162,7 @@
     </style>
 </head>
 <body>
-    <a href="{{ url_for('index') }}" class="back-link">← Retour à l'accueil</a>
+            <a href="index.html" class="back-link">← Retour à l'accueil</a>
     
     <div class="portfolio-hero">
         <h1 class="portfolio-title">Selected Work</h1>
@@ -172,20 +172,75 @@
     </div>
     
     <div class="portfolio-grid">
-        {% for project in projects %}
-        <div class="portfolio-card" onclick="openProject('{{ project.id }}')">
-            <img src="{{ url_for('static', filename='images/' + project.image) }}" alt="{{ project.title }}" class="portfolio-image" loading="lazy">
+        <!-- Mining Brand Project -->
+        <div class="portfolio-card" onclick="openProject('mining-brand')">
+            <img src="static/images/cases/project-1-mining.jpg" alt="Stratégie de marque industrie minière" class="portfolio-image" loading="lazy">
             <div class="portfolio-content">
-                <div class="portfolio-category">{{ project.category }}</div>
-                <h3 class="portfolio-project-title">{{ project.title }}</h3>
-                <p class="portfolio-description">{{ project.description }}</p>
+                <div class="portfolio-category">Production Corporate</div>
+                <h3 class="portfolio-project-title">Une stratégie de marque distincte pour l'industrie minière</h3>
+                <p class="portfolio-description">Repositionnement complet d'une entreprise minière avec identité visuelle moderne et stratégie de communication ciblée.</p>
                 <div class="portfolio-meta">
-                    <span>{{ project.client }}</span>
-                    <span>{{ project.year }}</span>
+                    <span>Industrie Minière RDC</span>
+                    <span>2024</span>
                 </div>
             </div>
         </div>
-        {% endfor %}
+        
+        <!-- Tech Repositioning Project -->
+        <div class="portfolio-card" onclick="openProject('tech-repositioning')">
+            <img src="static/images/cases/project-2-tech.jpg" alt="Repositionnement marque tech" class="portfolio-image" loading="lazy">
+            <div class="portfolio-content">
+                <div class="portfolio-category">Identité Visuelle</div>
+                <h3 class="portfolio-project-title">Un repositionnement audacieux pour une marque tech émergente</h3>
+                <p class="portfolio-description">Rebranding complet avec nouvelle identité visuelle, site web et stratégie de communication digitale.</p>
+                <div class="portfolio-meta">
+                    <span>Tech Startup Lubumbashi</span>
+                    <span>2024</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Podcast Larza Project -->
+        <div class="portfolio-card" onclick="openProject('podcast-larza')">
+            <img src="static/images/cases/project-3-podcast.jpg" alt="Production podcast premium" class="portfolio-image" loading="lazy">
+            <div class="portfolio-content">
+                <div class="portfolio-category">Production Podcast</div>
+                <h3 class="portfolio-project-title">L'Histoire de Larza</h3>
+                <p class="portfolio-description">Production complète d'un podcast premium avec enregistrement studio, montage et distribution multi-plateformes.</p>
+                <div class="portfolio-meta">
+                    <span>Larza Media</span>
+                    <span>2024</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Corporate Events Project -->
+        <div class="portfolio-card" onclick="openProject('corporate-events')">
+            <img src="static/images/cases/project-4-events.jpg" alt="Événements corporatifs premium" class="portfolio-image" loading="lazy">
+            <div class="portfolio-content">
+                <div class="portfolio-category">Événementiel</div>
+                <h3 class="portfolio-project-title">La fusion du sport et de la sophistication</h3>
+                <p class="portfolio-description">Organisation complète d'événements corporatifs premium avec production audiovisuelle et stratégie de communication.</p>
+                <div class="portfolio-meta">
+                    <span>Corporate Events RDC</span>
+                    <span>2024</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Urban Mobility Project -->
+        <div class="portfolio-card" onclick="openProject('mobility-rebranding')">
+            <img src="static/images/cases/project-5-mobility.jpg" alt="Rebranding mobilité urbaine" class="portfolio-image" loading="lazy">
+            <div class="portfolio-content">
+                <div class="portfolio-category">Stratégie Digitale</div>
+                <h3 class="portfolio-project-title">Rebranding de la mobilité urbaine</h3>
+                <p class="portfolio-description">Transformation digitale complète avec nouveau site web, identité visuelle et stratégie de communication.</p>
+                <div class="portfolio-meta">
+                    <span>Mobilité Urbaine Lubumbashi</span>
+                    <span>2024</span>
+                </div>
+            </div>
+        </div>
     </div>
     
     <!-- Project Detail Modal -->
@@ -197,7 +252,53 @@
     </div>
     
     <script>
-        const projects = {{ projects | tojson }};
+        const projects = [
+        {
+            id: 'mining-brand',
+            title: 'Une stratégie de marque distincte pour l\'industrie minière',
+            category: 'Production Corporate',
+            description: 'Repositionnement complet d\'une entreprise minière avec identité visuelle moderne et stratégie de communication ciblée.',
+            client: 'Industrie Minière RDC',
+            year: '2024',
+            image: 'static/images/cases/project-1-mining.jpg'
+        },
+        {
+            id: 'tech-repositioning',
+            title: 'Un repositionnement audacieux pour une marque tech émergente',
+            category: 'Identité Visuelle',
+            description: 'Rebranding complet avec nouvelle identité visuelle, site web et stratégie de communication digitale.',
+            client: 'Tech Startup Lubumbashi',
+            year: '2024',
+            image: 'static/images/cases/project-2-tech.jpg'
+        },
+        {
+            id: 'podcast-larza',
+            title: 'L\'Histoire de Larza',
+            category: 'Production Podcast',
+            description: 'Production complète d\'un podcast premium avec enregistrement studio, montage et distribution multi-plateformes.',
+            client: 'Larza Media',
+            year: '2024',
+            image: 'static/images/cases/project-3-podcast.jpg'
+        },
+        {
+            id: 'corporate-events',
+            title: 'La fusion du sport et de la sophistication',
+            category: 'Événementiel',
+            description: 'Organisation complète d\'événements corporatifs premium avec production audiovisuelle et stratégie de communication.',
+            client: 'Corporate Events RDC',
+            year: '2024',
+            image: 'static/images/cases/project-4-events.jpg'
+        },
+        {
+            id: 'mobility-rebranding',
+            title: 'Rebranding de la mobilité urbaine',
+            category: 'Stratégie Digitale',
+            description: 'Transformation digitale complète avec nouveau site web, identité visuelle et stratégie de communication.',
+            client: 'Mobilité Urbaine Lubumbashi',
+            year: '2024',
+            image: 'static/images/cases/project-5-mobility.jpg'
+        }
+    ];
         
         function openProject(projectId) {
             const project = projects.find(p => p.id === projectId);
